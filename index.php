@@ -40,7 +40,7 @@
 
 			<nav id="main-navigation" class="span-12">
 				<ul>
-					<li class="active"><a href="index.html">Home</a></li>
+					<li class="active"><a href="index_old.html">Home</a></li>
 					<li><a href="services.html">Services</a></li>
 					<li><a href="news.html">News</a></li>
 					<li><a href="contact.html">Contact Us</a></li>
