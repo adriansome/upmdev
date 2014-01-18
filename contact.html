@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Morecraft Drury</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="css/styles-lte-ie8.css" />
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- Begin #page-header -->
+	<header id="page-header">
+		<div class="constrained">
+			<a href="/" class="span-3"><img src="images/logo.png" alt="Morecraft Drury" class="logo" /></a>
+
+			<nav id="main-navigation" class="span-12">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="news.html">News</a></li>
+					<li class="active"><a href="contact.html">Contact Us</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">About Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- End #page-header -->
+
+	<div id="header-bar">
+		<div class="constrained">
+			<h1>Contact</h1>
+		</div>
+	</div>
+
+	<!-- Begin #map-wrapper -->
+	<div class="map-wrapper">
+		<div id="map1">
+
+		</div>
+
+		<div id="map2">
+
+		</div>
+	</div>
+	<!-- End #map-wrapper -->
+
+	<!-- Begin #main-content-wrapper -->
+	<div id="main-content-wrapper">
+		<div class="constrained">
+
+			<div class="span-5">
+				<h2>Contact Us</h2>
+				<p>We are always interested in hearing from potentional clients.  If you’d like to reach us, email us using the form to the right or contact us using the info below.</p>
+
+				<p><strong>General Enquiries:</strong>  <a href="mailto:info@morecraftdurury.com">info@morecraftdurury.com</a></p>
+
+				<p>
+					<strong>Bristol:</strong>  (0123) 456-7891<br/>
+					<strong>London:</strong>  (0123) 456-7891
+				</p>
+
+				<p><strong>Fax:</strong>  (0123) 456-7891</p>
+			</div>
+
+			<div class="span-5">
+				<form action="#" method="post" class="contact-form">
+					<input type="text" placeholder="Name" />
+					<input type="email" placeholder="Email address" />
+					<textarea cols="20" rows="5" placeholder="Your Message"></textarea>
+					<input type="submit" value="Send" />
+				</form>
+			</div>
+
+			<div class="span-5">
+				<h2>Morecraft Drury</h2>
+				<div class="pictureframe">
+					<img src="example-content/office.jpg" alt="" />
+				</div>
+				<div>
+					<div class="span-one-half">
+						<p>
+							Castlemead<br/>
+							Lower Castle Street<br/>
+							Bristol<br/>
+							BS1 3AG
+						</p>
+					</div>
+					<div class="span-one-half">
+						<p>
+							Central Court<br/>
+							25 Southampton Buildings<br/>
+							London<br/>
+							WC2A 1AL
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End #main-content-wrapper -->
+
+	<!-- Begin #page-footer -->
+	<footer id="page-footer">
+		<div class="constrained">
+			<div class="span-6">
+				<h2>About Us</h2>
+				<p>Estia Consulting is a Construction Consultancy, providing a wide range of construction and property advice to private, public, commercial and industrial clients.</p>
+				<p>We specialise in project management, quantity surveying, procurement, project recovery, dispute resolution and business management services. Our mission is to provide high value consultancy advice that will help improve our client’s performance, profits and future prosperity.</p>
+			</div>
+			<div class="span-3"><!-- footer nav can go here --></div>
+			<div class="span-3"><!-- Twitter widget can go here --></div>
+			<div class="span-3">
+				<p class="icon-address">Castlemead, Lower Castle Street, Bristol, BS1 3AG</p>
+
+				<p class="icon-tel">0117 917 5200</p>
+
+				<p class="icon-address">Central Court, 25 Southampton Buildings, London, WC2A 1AL</p>
+				<p class="icon-tel">020 776 96781</p>
+
+				<p class="icon-email"><a href="mailto:enquires@morecraftdrury.com">enquires@morecraftdrury.com</a></p>
+			</div>
+		</div>
+	</footer>
+	<!-- End #page-footer -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script>
+		function initialiseMap() {
+			var mapPoint = new google.maps.LatLng(51.355541,-2.144548);
+			var mapOptions = {
+				zoom: 13,
+				center: mapPoint,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map1 = new google.maps.Map(document.getElementById("map1"), mapOptions);
+			var map2 = new google.maps.Map(document.getElementById("map2"), mapOptions);
+			//var markerImage = new google.maps.MarkerImage("/themes/wetwindy/images/marker.png", new google.maps.Size(77, 28), new google.maps.Point(0,0), new google.maps.Point(31,27));
+
+			var marker = new google.maps.Marker({
+				position: mapPoint,
+				map: map
+			});
+		}
+
+		$(function(){
+			initialiseMap();
+		});
+	</script>
+
+</body>
+</html>
