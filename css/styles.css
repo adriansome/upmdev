@@ -55,10 +55,17 @@ html {
 
 body {
 	min-width: 1200px;
-	color: #404041;
+	color: #747474;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 15px;
 }
+
+#wrapper{
+	width:1200px;
+	margin:0 auto;
+	position:relative;
+}
+
 
 p.highlighted {
 	font-size: 20px;
@@ -161,16 +168,17 @@ width: 60px,
 margin: 0 10px;
 */
 
-.constrained {//outline: 1px solid blue;
-	max-width: 1200px;
-	width: 1200px;
+.constrained {outline: 1px solid blue;
+	max-width: 940px;
+	width: 960px;
 	margin: 0 auto;
 }
 
-[class*="span-"],
-column {//outline: 1px dashed green;
+/*wildcard selector. looks for any child element under  a class that CONTAINS span. */
+[class*="span"],
+.column {outline: 1px dashed pink;
 	float: left;
-	margin: 0 10px;
+	margin: 0 0px;
 	min-height: 1px;
 	/*
 	margin-left: 1.69491525424%;
@@ -180,17 +188,18 @@ column {//outline: 1px dashed green;
 
 
 .constrained > *:first-child {
-	margin-left: 10px;
-	margin-right: 10px;
-	//background-color: red !important;
+	margin-left: 0px;
+	margin-right: 20px;
+	/*background-color: red !important;*/
 }
 
 [class*="span-"]:first-child {
-	//margin-left: 0px;
+	margin-left: 0px;
 }
 
 [class*="span-"]:last-child {
-	float: right;
+	float: left;
+        margin-left: 20px;
 }
 
 .span-3 {
@@ -269,38 +278,72 @@ column {//outline: 1px dashed green;
 
 /* ----- Page Header & Footer----- */
 
+#home-header{
+ 
+    background: url("../images/header_bg.jpg") left top no-repeat;
+    width: 1200px;
+    height: 440px;
+}
+
+
+
 #page-header .logo {
 	margin: 25px 0;
 }
 
+#page-header {
+	width: 100%;
+        height: 205px;
+}
+
 #page-footer {
 	padding-top: 30px;
-	background-color: #414141;
-	color: #fefefe;
+	
+	color: #000000;
 	font-size: 12px;
+        background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #C5E4EA),
+	color-stop(1, #ECFCFF)
+);
+background-image: -o-linear-gradient(bottom, #C5E4EA 0%, #ECFCFF 100%);
+background-image: -moz-linear-gradient(bottom, #C5E4EA 0%, #ECFCFF 100%);
+background-image: -webkit-linear-gradient(bottom, #C5E4EA 0%, #ECFCFF 100%);
+background-image: -ms-linear-gradient(bottom, #C5E4EA 0%, #ECFCFF 100%);
+background-image: linear-gradient(to bottom, #C5E4EA 0%, #ECFCFF 100%);
 }
 
 #page-footer h2 {
-	color: #fefefe;
-	font-size: 15px;
+	color: #000000;
+	font-size: 18px;
 }
 
-.icon-address,
+
+
+.icon-facebook,
 .icon-email,
-.icon-tel {
+.icon-google,
+.icon-twitter {
 	padding-left: 28px;
 }
 
-.icon-address {
-	background: transparent url(../images/icon-address.png) left top no-repeat
+.icon-facebook{
+	background: url(../images/icon-facebook.png) left top no-repeat;
+    
+}
+.icon-twitter {
+	background: url(../images/icon-twitter.png) left top no-repeat;
+    
 }
 
 .icon-email {
-	background: transparent url(../images/icon-email.png) left top no-repeat
+	background: url(../images/icon-email.png) left top no-repeat;
 }
 
-.icon-tel {
-	background: transparent url(../images/icon-tel.png) left top no-repeat
+.icon-google{
+	background: url(../images/icon-google.png) left top no-repeat;
 }
 
 /* ----- Main Navigation ----- */
@@ -394,7 +437,7 @@ column {//outline: 1px dashed green;
 /* ----- HOMEPAGE ----------------------------------------------------- */
 
 #home #main-content-wrapper {
-	background-color: #E7E7E7;
+	background-color: #ffffff;
 }
 /*
 .slider {
@@ -453,8 +496,9 @@ column {//outline: 1px dashed green;
 .nugget h2 {
 	padding: 0 8px;
 	/*background-color: rgba(186, 38, 37, 0.6);*/
-	background-color: rgba(166, 33, 33, 0.8);
-	color: #fff;
+	/*background-color: rgba(166, 33, 33, 0.8);*/
+        border-bottom: gray solid 1px;
+	color: #000000;
 	font-size: 18px;
 	line-height: 32px;
 }
@@ -462,31 +506,19 @@ column {//outline: 1px dashed green;
 .nugget p {
 	font-size: 13px;
 }
-
+/*nugget with an image*/
 .nugget .text {
 	float: left;
-	width: 160px;
+	width: 220px;
 }
 
 .nugget .thumbnail {
-	float: right;
-	width: 130px;
+	float: left;
+	width: 60px;
+        padding: 0px 10px 0px 0px;
 }
 
-.nugget-case-studies h3 {
-	font-size: 18px;
-}
 
-.nugget-case-studies .item {
-	padding-top: 12px;
-	padding-bottom: 12px;
-	border-top: 1px solid #9f9fa0;
-}
-
-.nugget-case-studies .items .item:first-child {
-	padding-top: 0px;
-	border-top: none;
-}
 
 /* ----- INSIDE PAGES ------------------------------------------------- */
 
@@ -577,6 +609,17 @@ p {
 .sidebar p {
 	color: #7e7e7e;
 	font-size: 13px;
+}
+
+.book-title {
+	color: #ba2625;	
+	font-size: 12px;
+        
+}
+.book-review-holder{
+    float: right;
+	color: #ba2625;	
+	font-size: 12px;
 }
 
 .date {
